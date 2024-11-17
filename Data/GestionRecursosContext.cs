@@ -5,6 +5,7 @@ namespace GestionRecursosHumanos.Data
 {
     public class GestionRecursosContext : DbContext
     {
+        public GestionRecursosContext(DbContextOptions options) : base(options) { }
         public DbSet<Beneficios> Beneficio { get; set;}
         public DbSet<Cargos> Cargo { get; set;}
         public DbSet<Departamentos> Departamento { get; set;}
