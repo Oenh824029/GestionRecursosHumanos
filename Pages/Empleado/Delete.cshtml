@@ -1,0 +1,65 @@
+﻿@page
+@model GestionRecursosHumanos.Pages.Empleado.DeleteModel
+@{
+
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+<h3>Are you sure you want to delete this?</h3>
+
+<div>
+    <h4>Empleados</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Empleado.NombreEmpleado);
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Empleado.NombreEmpleado);
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Empleado.ApellidoEmpleado);
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Empleado.ApellidoEmpleado);
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Empleado.EmailEmpleado);
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Empleado.EmailEmpleado);
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Empleado.TelefonoEmpleado);
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Empleado.TelefonoEmpleado);
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Empleado.FechaContratacion);
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Empleado.FechaContratacion);
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Empleado.SalarioEmpleado);
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Empleado.SalarioEmpleado);
+        </dd>
+
+
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="Empleado.IdEmpleados"/>
+        <input type="submit" value="Delete" class="btn btn-danger"/>
+        <a asp-page="./Index" class="btn btn-primary"> Back to List</a>
+    </form>
+</div>
