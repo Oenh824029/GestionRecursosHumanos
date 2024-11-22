@@ -1,5 +1,6 @@
 using GestionRecursosHumanos.Data;
 using GestionRecursosHumanos.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +8,7 @@ using Microsoft.Identity.Client;
 
 namespace GestionRecursosHumanos.Pages.Empleado
 {
+    [Authorize]
     public class EditModel : PageModel
     {
         private readonly GestionRecursosContext _context;

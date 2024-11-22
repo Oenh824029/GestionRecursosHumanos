@@ -1,24 +1,33 @@
+using GestionRecursosHumanos.Data;
 using GestionRecursosHumanos.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 namespace GestionRecursosHumanos.Pages.Account
 {
     public class LoginModel : PageModel
     {
-        [BindProperty]
-        public User User { get; set; }
+        private readonly GestionRecursosContext _context;
+        public LoginModel(GestionRecursosContext context)
+        {
+            _context = context;
+        }
         public void OnGet()
         {
         }
-
-        public async Task<IActionResult> Onpost()
+        [BindProperty]
+        public User User { get; set; }
+        public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid) return Page();
 
-            if (User.Email == "preuebaCorreo@gmail.com" && User.Password == "12345")
+            var user = await _context.Users.FirstOrDefaultAsync(u =>
+            u.Email == User.Email && u.Password == User.Password);
+
+            if (user != null)
             {
                 //se crea los claim, datos a almacenar en la cookie
                 var claims = new List<Claim>
@@ -37,10 +46,12 @@ namespace GestionRecursosHumanos.Pages.Account
 
 
                 return RedirectToPage("/Index");
-
             }
 
-                return Page();
+            _context.Users.Add(User);
+            await _context.SaveChangesAsync();
+
+            return Page();
         }
     }
 }

@@ -1,10 +1,12 @@
 using GestionRecursosHumanos.Data;
 using GestionRecursosHumanos.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace GestionRecursosHumanos.Pages.Empleado
 {
+    [Authorize]
     public class CreateModel : PageModel
     {
         private readonly GestionRecursosContext _context;
