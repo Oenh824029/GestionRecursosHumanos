@@ -60,7 +60,13 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.IdCargo_fk)
                 </td>
+                
                 <td>
+                    <a asp-page="./Edit" asp-route-id="@item.IdEmpleados" class="btn btn-warning">
+                        Edit
+                    </a>
+                </td>
+                <td>          
                     <a asp-page="./Delete" asp-route-id="@item.IdEmpleados" class="btn btn-danger">
                     Delete    
                     </a>
