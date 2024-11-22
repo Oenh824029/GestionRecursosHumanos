@@ -22,7 +22,7 @@ h1{
     color:rebeccapurple;
 }
 body {
-
+    
     color: black;
     height: 100vh; /* Asegura que el fondo ocupe toda la altura de la pantalla */
     margin: 0; /* Elimina el margen por defecto */
