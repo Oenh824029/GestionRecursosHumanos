@@ -12,9 +12,15 @@ namespace GestionRecursosHumanos.Pages.Account
         {
         }
 
-        public void Onpost()
+        public async Task<IActionResult> Onpost()
         {
-            
+            if (!ModelState.IsValid) return Page();
+
+            if (User.Email == "preuebaCorreogmail.com" && User.Password == "12345")
+            {
+                return RedirectToPage("/index");
+            }
+            return Page();
         }
     }
 }
