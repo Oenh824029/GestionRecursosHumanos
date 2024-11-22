@@ -1,4 +1,31 @@
 ﻿@page
 @model GestionRecursosHumanos.Pages.Departamento.CreateModel
 @{
+    ViewData["Title"] = "Create";
 }
+<h1>Create</h1>
+
+<h4>Departamentos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="form-group">
+                <label asp-for="Departamentos.NombreDepartamento" class="control-label"></label>
+                <input asp-for="Departamentos.NombreDepartamento" class="form-control" />
+                <span asp-validation-for="Departamentos.NombreDepartamento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Departamentos.UbicacionDepartamento" class="control-label"></label>
+                <input asp-for="Departamentos.UbicacionDepartamento" class="form-control" />
+                <span asp-validation-for="Departamentos.UbicacionDepartamento" class="text-danger"></span>
+            </div>
+      
+            <div class="form-group mt-3">
+                <input type="submit" value="Create" class="btn btn-success" />
+                <a asp-page="Index" class="btn btn-primary">Regresar a Lista de Beneficios</a>
+            </div>
+        </form>
+    </div>
+</div>
