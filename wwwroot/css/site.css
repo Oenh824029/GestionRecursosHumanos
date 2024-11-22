@@ -26,7 +26,8 @@ body {
     color: black;
     height: 100vh; /* Asegura que el fondo ocupe toda la altura de la pantalla */
     margin: 0; /* Elimina el margen por defecto */
-    font-family: monospace;
+    font-family: 'Source Code Pro';
+    
 }
 /* GestionRecursosHumanos.styles.css */
 nav.navbar {
@@ -42,7 +43,7 @@ nav.navbar {
     }
 
 footer.footer {
-    background: linear-gradient(135deg, #9516d7, #800bc4, #6c00b0);
+    background: linear-gradient(135deg, #7421b3, #6019a1, #6c00b0);
     color: white;
     font-family: 'Source Code Pro';
 }
