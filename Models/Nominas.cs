@@ -14,6 +14,6 @@ namespace GestionRecursosHumanos.Models
         [Required]
         public string PeriodoFin { get; set; }
         public float TotalPagado { get; set; }
-        public string pruebafelipe { get; set; }
+       
     }
 }
