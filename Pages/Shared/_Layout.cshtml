@@ -20,21 +20,24 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Empleado/Index">Empleados</a>
+                            <a class="nav-link" asp-area="" asp-page="/Empleado/Index">Empleados</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Nomina/Index">Nomina</a>
+                            <a class="nav-link " asp-area="" asp-page="/Nomina/Index">Nomina</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Beneficio/Index">Beneficios</a>
+                            <a class="nav-link" asp-area="" asp-page="/Beneficio/Index">Beneficios</a>
                         </li>
                     </ul>
+                    <div class="mr-2">
+                        <partial name="_loginStatusPartial"/>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -45,8 +48,8 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
+    <footer class="border-top footer ">
+        <div class="container" >
             &copy; 2024 - GestionRecursosHumanos - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>

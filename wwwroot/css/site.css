@@ -1,11 +1,13 @@
 html {
   font-size: 14px;
+  font-family:'Source Code Pro';
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+        font-family: 'Source Code Pro';
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -16,7 +18,46 @@ html {
   position: relative;
   min-height: 100%;
 }
-
-body {
-  margin-bottom: 60px;
+h1{
+    color:rebeccapurple;
 }
+body {
+
+    color: black;
+    height: 100vh; /* Asegura que el fondo ocupe toda la altura de la pantalla */
+    margin: 0; /* Elimina el margen por defecto */
+    font-family: monospace;
+}
+/* GestionRecursosHumanos.styles.css */
+nav.navbar {
+    background: linear-gradient(135deg, #9516d7, #800bc4, #6c00b0);
+    color: white;
+    font-family: 'Source Code Pro';
+}
+
+    nav.navbar a.nav-link,
+    nav.navbar a.navbar-brand {
+        color: white !important;
+        font-family: 'Source Code Pro';
+    }
+
+footer.footer {
+    background: linear-gradient(135deg, #9516d7, #800bc4, #6c00b0);
+    color: white;
+    font-family: 'Source Code Pro';
+}
+
+    footer.footer a {
+        color: white;
+        font-family:'Source Code Pro';
+    }
+
+
+
+
+
+
+
+
+
+
