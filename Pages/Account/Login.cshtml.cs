@@ -32,7 +32,7 @@ namespace GestionRecursosHumanos.Pages.Account
                 //se crea los claim, datos a almacenar en la cookie
                 var claims = new List<Claim>
                 {
-                    new Claim (ClaimTypes.Name, " "),
+                    new Claim (ClaimTypes.Name,"Admin"),
                     new Claim(ClaimTypes.Email,User.Email),
                 };
 
