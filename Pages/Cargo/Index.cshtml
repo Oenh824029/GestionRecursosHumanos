@@ -1,0 +1,48 @@
+﻿@page
+@model GestionRecursosHumanos.Pages.Cargo.IndexModel
+@{
+}
+
+<p>
+    <a asp-page="Create" class="btn btn-success">Create New</a>
+</p>
+
+<h1> Index Cargos</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.cargo[0].TituloCargo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cargo[0].DescripcionCargos)
+            </th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.cargo)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TituloCargo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DescripcionCargos)
+                </td>
+
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.IdCargos" class="btn btn-warning">
+                        Edit
+                    </a>
+                </td>
+                <td>
+                    <a asp-page="./Delete" asp-route-id="@item.IdCargos" class="btn btn-danger">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,50 @@
+﻿@page
+@model GestionRecursosHumanos.Pages.Departamento.IndexModel
+@{
+    ViewData["Title"] = "Index Departamentos";
+}
+
+<p>
+    <a asp-page="Create" class="btn btn-success">Create New</a>
+</p>
+
+<h1> Index Departamento</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Departamento[0].NombreDepartamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Departamento[0].UbicacionDepartamento)
+            </th>
+           
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Departamento)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreDepartamento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UbicacionDepartamento)
+                </td>
+
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.IdDepartamento" class="btn btn-warning">
+                        Edit
+                    </a>
+                </td>
+                <td>
+                    <a asp-page="./Delete" asp-route-id="@item.IdDepartamento" class="btn btn-danger">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
