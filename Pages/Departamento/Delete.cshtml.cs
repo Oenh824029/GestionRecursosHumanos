@@ -1,13 +1,16 @@
 using GestionRecursosHumanos.Data;
 using GestionRecursosHumanos.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace GestionRecursosHumanos.Pages.Departamento
 {
+    [Authorize]
     public class DeleteModel : PageModel
     {
+        
         private readonly GestionRecursosContext _context;
 
         public DeleteModel(GestionRecursosContext context)

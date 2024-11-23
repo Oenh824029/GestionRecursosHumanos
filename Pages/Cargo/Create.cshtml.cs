@@ -1,12 +1,10 @@
 using GestionRecursosHumanos.Data;
 using GestionRecursosHumanos.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace GestionRecursosHumanos.Pages.Departamento
+namespace GestionRecursosHumanos.Pages.Cargo
 {
-    [Authorize]
     public class CreateModel : PageModel
     {
         private readonly GestionRecursosContext _context;
@@ -23,16 +21,16 @@ namespace GestionRecursosHumanos.Pages.Departamento
 
 
         [BindProperty]
-        public Departamentos Departamentos { get; set; }
+        public Cargos Cargo { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid || _context.Departamento == null || Departamentos == null)
+            if (!ModelState.IsValid || _context.Cargo == null || Cargo == null)
             {
                 return Page();
             }
 
-            _context.Departamento.Add(Departamentos);
+            _context.Cargo.Add(Cargo);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
