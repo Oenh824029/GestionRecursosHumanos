@@ -1,0 +1,37 @@
+﻿@page
+@model GestionRecursosHumanos.Pages.Cargo.DeleteModel
+@{
+    ViewData["Title"] = "Delete";
+}
+<h1>Delete</h1>
+<h3>Are you sure you want to delete this?</h3>
+
+<div>
+    <h4>Cargos</h4>
+    <hr />
+    <dl class="row">
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cargo.TituloCargo);
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cargo.TituloCargo);
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cargo.DescripcionCargos);
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cargo.DescripcionCargos);
+        </dd>
+
+
+
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="Cargo.IdCargos" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-page="./Index" class="btn btn-primary"> Back to Cargos List</a>
+    </form>
+</div>

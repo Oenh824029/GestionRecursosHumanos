@@ -18,8 +18,8 @@ html {
   position: relative;
   min-height: 100%;
 }
-h1{
-    color:rebeccapurple;
+h1 {
+    color: #020f59;
 }
 body {
     
@@ -31,7 +31,7 @@ body {
 }
 /* GestionRecursosHumanos.styles.css */
 nav.navbar {
-    background: linear-gradient(135deg, #9516d7, #800bc4, #6c00b0);
+    background: linear-gradient(135deg, #1c31a5, #101f78, #020f59);
     color: white;
     font-family: 'Source Code Pro';
 }
@@ -43,7 +43,7 @@ nav.navbar {
     }
 
 footer.footer {
-    background: linear-gradient(135deg, #7421b3, #6019a1, #6c00b0);
+    background: linear-gradient(#1c31a5, #101f78, #020f59);
     color: white;
     font-family: 'Source Code Pro';
 }
